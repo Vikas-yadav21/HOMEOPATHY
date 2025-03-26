@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homeopathic Medical Website</title>
+  </head>
+  <style>
+    h1{
+      text-align: center;
+    }
+
+    h1 {
+      color: #2c3e50;
+      margin-top: 20px;
+      text-align: center;
+      padding: 10px 20px;
+      
+  }
+  h1:hover{
+     transform: scale(1);
+     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+     transition: .3s ease;
+  }
+    #contact-page{
+      margin :110px;
+    }
+
+     /* Additional Info */
+        .contact-info {
+            margin-top: 30px;
+            padding: 20px;
+            background: #e6f7f7;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        .contact-info:hover {
+            transform: scale(1.03);
+        }
+
+        .contact-info h3 {
+            color: #008080;
+            margin-bottom: 10px;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+        }
+
+        p{
+          text-align: center;
+        }
+  </style>
+  <body>
+    <div id="navbar-placeholder"></div>
+    
+    <div id=contact-page>
+    <h1>Contact Us</h1>
+    <p>Get in touch with us for any inquiries or to book an appointment.</p>
+    <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        
+        <button type="submit">Submit</button>
+    </form>
+    <p id="formMessage"></p>
+    </div>
+    <div class="contact-info">
+        <h3>Our Address</h3>
+        <p>123 Green Street, New Delhi, India</p>
+        <p>Email: support@homeopathycare.com</p>
+        <p>Phone: +91 835454546</p>
+    </div>
+    </body>
+  <script defer src="index.js"></script>
+</html>

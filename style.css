@@ -1,0 +1,310 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f8f8f8;
+}
+
+/* Navigation Bar */
+header {
+  background: #4CAF50;
+  padding: 15px 20px;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: #FFD700;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  margin: 5px;
+  padding: 200px 30px;
+  background: no-repeat center center/cover;
+  animation: slideshow 12s infinite;
+}
+@keyframes slideshow {
+  0%,33% { background-image: url('https://plus.unsplash.com/premium_photo-1682130157004-057c137d96d5?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2xpbmljfGVufDB8fDB8fHww'); }
+  34%,66% { background-image: url('https://www.carepointmedical.com.au/wp-content/uploads/2020/08/doctors_three.jpg'); }
+ 67%, 100% { background-image: url('https://interiorlover.in/wp-content/uploads/2022/05/Saluja-Skin-Clinic-The-Design-Code8.jpg'); }
+}
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #FFD700;
+  color: #333;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background: #FFA500;
+}
+
+.homeopathy-card:hover{
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transition: .3s ease;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+      flex-direction: column;
+  }
+
+  nav ul {
+      padding-top: 10px;
+  }
+
+  nav ul li {
+      display: block;
+      margin-bottom: 10px;
+  }
+
+  .hero {
+      padding: 80px 20px;
+  }
+
+  .hero h1 {
+      font-size: 28px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.contact {
+  text-align: center;
+  padding: 50px;
+  background: white;
+  max-width: 500px;
+  margin: 50px auto;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+.contact h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  text-align: left;
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+
+form input, form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+form button {
+  margin-top: 15px;
+  padding: 10px;
+  background: #2c3e50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+form button:hover {
+  background: #1a252f;
+}
+
+.contact {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.typing-container {
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+  margin-left: 450px;
+}
+.word {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid white;
+  font-weight: bold;
+  animation: typing 2s steps(10, end) infinite alternate, blinkCursor 0.6s infinite;
+}
+
+@keyframes typing {
+  0% { width: 20px; }
+  100% { width: 11ch; } 
+}
+
+@keyframes blinkCursor {
+  50% { border-color: transparent; }
+}
+
+
+.homeopathy-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background-color: #aab2bb;
+  text-align: center;
+}
+
+.homeopathy-text {
+  flex: 1;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1a252f;
+  padding: 20px;
+  font-family: sans-serif;
+
+}
+
+.homeopathy-image img {
+  width: 400px; /* Adjust as needed */
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .homeopathy-section {
+      flex-direction: column;
+  }
+
+  .homeopathy-image img {
+      width: 100%;
+  }
+}
+
+
+.homeopathy-service-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #ffffff;
+}
+
+.homeopathy-service-section h2 {
+  font-size: 2.5rem;
+  color: #1a252f; 
+  margin-bottom: 20px;
+}
+
+.homeopathy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.homeopathy-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.homeopathy-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.homeopathy-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.homeopathy-card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .homeopathy-service-section h2 {
+      font-size: 2rem;
+  }
+}
+
+span:hover{
+  color: #1a252f;
+}
